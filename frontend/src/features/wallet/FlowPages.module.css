@@ -1,0 +1,234 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.amountSection {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.amountLabel {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+
+.amountInput {
+  font-size: 32px;
+  font-weight: 700;
+  padding: 12px 0;
+  border: none;
+  border-bottom: 2px solid var(--color-primary);
+  background: transparent;
+  color: var(--color-text);
+  width: 100%;
+}
+
+.amountInput:focus {
+  outline: none;
+}
+
+.quickAmounts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip {
+  padding: 8px 14px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.chip:active {
+  background: rgba(165, 0, 100, 0.1);
+}
+
+.hint {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.confirmCard {
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: 4px 0;
+  box-shadow: var(--shadow-sm);
+}
+
+.confirmRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 14px;
+}
+
+.confirmRow span:first-child {
+  color: var(--color-text-secondary);
+}
+
+.amountHighlight {
+  color: var(--color-primary);
+  font-size: 18px;
+}
+
+.otpWarning {
+  padding: 12px 16px;
+  margin: 0;
+  font-size: 13px;
+  color: var(--color-warning);
+  background: #fff7ed;
+}
+
+.success {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.success h2 {
+  margin: 16px 0 8px;
+  font-size: 20px;
+}
+
+.success p {
+  color: var(--color-text-muted);
+  margin: 0 0 8px;
+}
+
+.refCode {
+  display: block;
+  padding: 12px;
+  background: var(--color-bg);
+  border-radius: var(--radius-md);
+  font-size: 13px;
+  word-break: break-all;
+}
+
+.bankCard {
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: 16px;
+  box-shadow: var(--shadow-sm);
+}
+
+.bankRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 14px;
+}
+
+.bankRow:last-child {
+  border-bottom: none;
+}
+
+.copyBtn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--color-primary);
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.statusBadge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: var(--radius-full);
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.pending { background: #fef3c7; color: #b45309; }
+.success { background: #dcfce7; color: #15803d; }
+
+.tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.tab {
+  flex: 1;
+  padding: 10px;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 14px;
+  background: var(--color-surface);
+  color: var(--color-text-muted);
+}
+
+.tabActive {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  font-size: 15px;
+  color: var(--color-text);
+}
+
+.bankSelect {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 8px;
+  text-align: left;
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+}
+
+.bankSelect span {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+}
+
+.bankSelectActive {
+  border-color: var(--color-primary);
+  background: rgba(165, 0, 100, 0.06);
+}
+
+.linkBtn {
+  color: var(--color-primary);
+  font-weight: 600;
+  padding: 0;
+  text-decoration: underline;
+}
+
+.qrPreview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 20px;
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.qrPreview canvas,
+.qrPreview svg {
+  border-radius: var(--radius-md);
+}

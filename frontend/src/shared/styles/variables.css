@@ -1,0 +1,36 @@
+:root {
+  /* MoMo-inspired + banking trust */
+  --color-primary: #a50064;
+  --color-primary-dark: #7a0049;
+  --color-primary-light: #e91e8c;
+  --gradient-header: linear-gradient(135deg, #d82d8b 0%, #a50064 50%, #7a0049 100%);
+  --gradient-card: linear-gradient(145deg, #e91e8c 0%, #a50064 100%);
+
+  --color-secondary: #2563eb;
+  --color-success: #16a34a;
+  --color-warning: #ea580c;
+  --color-danger: #dc2626;
+
+  --color-bg: #f2f2f7;
+  --color-surface: #ffffff;
+  --color-border: #e8e8ed;
+  --color-text: #1c1c1e;
+  --color-text-secondary: #636366;
+  --color-text-muted: #8e8e93;
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 8px 32px rgba(165, 0, 100, 0.15);
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  --font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --app-max-width: 430px;
+  --header-height: 56px;
+  --bottom-nav-height: 64px;
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+}

@@ -3,7 +3,9 @@
 ## Phase 1: Foundation (2-3 tuần)
 
 ### 1.1 Project Setup
+
 **Tasks:**
+
 - [ ] Initialize NestJS backend project
 - [ ] Initialize React + TypeScript frontend project
 - [ ] Setup MongoDB connection
@@ -13,13 +15,16 @@
 - [ ] Initialize Git repository (if not done)
 
 **Deliverables:**
+
 - [ ] Running backend on `http://localhost:3000`
 - [ ] Running frontend on `http://localhost:3001`
 - [ ] Docker containers for all services
 - [ ] Environment configuration
 
 ### 1.2 Backend Foundation
+
 **Tasks:**
+
 - [ ] Setup NestJS app structure
 - [ ] Configure database (MongoDB with Mongoose)
 - [ ] Configure Redis client
@@ -30,6 +35,7 @@
 - [ ] Setup Winston logging
 
 **Files to create:**
+
 ```
 src/
 ├── common/
@@ -54,7 +60,9 @@ src/
 ```
 
 ### 1.3 Frontend Foundation
+
 **Tasks:**
+
 - [ ] Setup React project structure
 - [ ] Configure TypeScript
 - [ ] Setup Tailwind CSS / Material UI
@@ -65,6 +73,7 @@ src/
 - [ ] Setup environment configuration
 
 **Files to create:**
+
 ```
 src/
 ├── components/
@@ -86,7 +95,9 @@ src/
 ```
 
 ### 1.4 Database Schema Design
+
 **Tasks:**
+
 - [ ] Design User collection
 - [ ] Design Wallet collection
 - [ ] Design Transaction collection
@@ -95,11 +106,14 @@ src/
 - [ ] Create seed data (optional)
 
 **Deliverables:**
+
 - [ ] Database schema documentation
 - [ ] Indexes for performance
 
 ### 1.5 Testing Setup
+
 **Tasks:**
+
 - [ ] Configure Jest for backend
 - [ ] Configure Vitest for frontend
 - [ ] Create sample unit tests
@@ -110,7 +124,9 @@ src/
 ## Phase 2: Authentication & User Management (3-4 tuần)
 
 ### 2.1 Authentication Module
+
 **Backend:**
+
 - [ ] User registration endpoint
 - [ ] Email verification flow
 - [ ] Login endpoint
@@ -121,6 +137,7 @@ src/
 - [ ] Role-based access control (RBAC)
 
 **Database:**
+
 ```typescript
 User {
   _id: ObjectId
@@ -165,6 +182,7 @@ OTP {
 ```
 
 **API Endpoints:**
+
 ```
 POST   /api/auth/register              # Register new user
 POST   /api/auth/verify-email          # Verify email with OTP
@@ -177,6 +195,7 @@ GET    /api/auth/profile               # Get current user profile
 ```
 
 **Frontend:**
+
 - [ ] Login page with email + password
 - [ ] Register page
 - [ ] OTP verification component
@@ -187,7 +206,9 @@ GET    /api/auth/profile               # Get current user profile
 - [ ] Store JWT/Refresh token securely (httpOnly cookies)
 
 ### 2.2 User Profile Management
+
 **Backend:**
+
 - [ ] Get user profile endpoint
 - [ ] Update user profile endpoint
 - [ ] Change password endpoint
@@ -195,6 +216,7 @@ GET    /api/auth/profile               # Get current user profile
 - [ ] Get KYC status endpoint
 
 **API Endpoints:**
+
 ```
 GET    /api/users/profile               # Get user profile
 PUT    /api/users/profile               # Update profile
@@ -204,6 +226,7 @@ PUT    /api/users/password              # Change password
 ```
 
 **Frontend:**
+
 - [ ] User profile page
 - [ ] Edit profile form
 - [ ] Change password form
@@ -211,13 +234,16 @@ PUT    /api/users/password              # Change password
 - [ ] Profile picture upload
 
 ### 2.3 Role-Based Access Control
+
 **Implementation:**
+
 - [ ] Create roles enum (USER, ADMIN, SUPER_ADMIN)
 - [ ] Create roles decorator
 - [ ] Create roles guard
 - [ ] Implement permission checking
 
 **Roles:**
+
 ```typescript
 USER: 
   - Can view own profile
@@ -238,6 +264,7 @@ SUPER_ADMIN:
 ```
 
 ### 2.4 Testing
+
 - [ ] Unit tests for auth service
 - [ ] Integration tests for auth endpoints
 - [ ] Frontend tests for login flow
@@ -247,7 +274,9 @@ SUPER_ADMIN:
 ## Phase 3: Wallet & Transaction Core (3-4 tuần)
 
 ### 3.1 Wallet Management
+
 **Database:**
+
 ```typescript
 Wallet {
   _id: ObjectId
@@ -267,6 +296,7 @@ Wallet {
 ```
 
 **Backend Endpoints:**
+
 ```
 GET    /api/wallets                    # List user wallets
 POST   /api/wallets                    # Create new wallet
@@ -277,6 +307,7 @@ GET    /api/wallets/:id/balance        # Get balance
 ```
 
 **Frontend:**
+
 - [ ] Wallet list page
 - [ ] Create wallet form
 - [ ] Wallet details page
@@ -284,7 +315,9 @@ GET    /api/wallets/:id/balance        # Get balance
 - [ ] Real-time balance update
 
 ### 3.2 Transaction Processing
+
 **Database:**
+
 ```typescript
 Transaction {
   _id: ObjectId
@@ -309,6 +342,7 @@ Transaction {
 ```
 
 **Backend Endpoints:**
+
 ```
 POST   /api/transactions/transfer      # Transfer money
 POST   /api/transactions/deposit       # Request deposit
@@ -318,6 +352,7 @@ GET    /api/transactions/:id           # Get transaction details
 ```
 
 **Business Logic:**
+
 - [ ] Validate sender has sufficient balance
 - [ ] Validate recipient exists
 - [ ] Check daily/monthly transaction limits
@@ -329,6 +364,7 @@ GET    /api/transactions/:id           # Get transaction details
 - [ ] Emit notification
 
 **Frontend:**
+
 - [ ] Transfer form with validation
 - [ ] Transaction history list
 - [ ] Filter & search transactions
@@ -336,7 +372,9 @@ GET    /api/transactions/:id           # Get transaction details
 - [ ] Status indicators
 
 ### 3.3 Transaction History & Reconciliation
+
 **Backend:**
+
 - [ ] Get transaction history with pagination
 - [ ] Filter by date range
 - [ ] Filter by transaction type
@@ -344,6 +382,7 @@ GET    /api/transactions/:id           # Get transaction details
 - [ ] Export transaction history (CSV)
 
 **Frontend:**
+
 - [ ] Transaction history table
 - [ ] Date range picker
 - [ ] Filter controls
@@ -351,6 +390,7 @@ GET    /api/transactions/:id           # Get transaction details
 - [ ] Print invoice
 
 ### 3.4 Error Handling & Rollback
+
 - [ ] Transaction rollback on failure
 - [ ] Error logging for debugging
 - [ ] Retry mechanism for failed transactions
@@ -361,7 +401,9 @@ GET    /api/transactions/:id           # Get transaction details
 ## Phase 4: Bank Integration & Advanced Features (3-4 tuần)
 
 ### 4.1 Bank Account Linking
+
 **Database:**
+
 ```typescript
 BankAccount {
   _id: ObjectId
@@ -381,6 +423,7 @@ BankAccount {
 ```
 
 **Backend Endpoints:**
+
 ```
 POST   /api/bank-accounts              # Link bank account
 GET    /api/bank-accounts              # List bank accounts
@@ -391,13 +434,16 @@ POST   /api/bank-accounts/:id/verify   # Verify with OTP
 ```
 
 **Implementation:**
+
 - [ ] Encrypt sensitive bank data
 - [ ] Integrate with third-party bank API (if available)
 - [ ] OTP verification for linking
 - [ ] Account number validation
 
 ### 4.2 Bank Deposits
+
 **Flow:**
+
 ```
 1. User initiates deposit
 2. System generates payment reference
@@ -408,6 +454,7 @@ POST   /api/bank-accounts/:id/verify   # Verify with OTP
 ```
 
 **Implementation:**
+
 - [ ] Create deposit request endpoint
 - [ ] Generate unique payment reference
 - [ ] Setup webhook for bank confirmations
@@ -415,7 +462,9 @@ POST   /api/bank-accounts/:id/verify   # Verify with OTP
 - [ ] Error handling for payment failures
 
 ### 4.3 Bank Withdrawals
+
 **Flow:**
+
 ```
 1. User requests withdrawal
 2. Validate balance & limits
@@ -428,6 +477,7 @@ POST   /api/bank-accounts/:id/verify   # Verify with OTP
 ```
 
 **Implementation:**
+
 - [ ] Create withdrawal endpoint
 - [ ] Withdrawal limit checks
 - [ ] Admin approval workflow (optional)
@@ -435,7 +485,9 @@ POST   /api/bank-accounts/:id/verify   # Verify with OTP
 - [ ] Webhook for withdrawal status updates
 
 ### 4.4 QR Code Payment
+
 **Database:**
+
 ```typescript
 QRTransaction {
   _id: ObjectId
@@ -452,12 +504,14 @@ QRTransaction {
 ```
 
 **Features:**
+
 - [ ] Generate QR code from wallet ID
 - [ ] Display QR code on user profile
 - [ ] Scan QR code to initiate transfer
 - [ ] Optional fixed amount QR codes
 
 **Frontend:**
+
 - [ ] QR display component
 - [ ] QR scanner component (react-qr-reader)
 - [ ] Request payment QR code
@@ -467,13 +521,16 @@ QRTransaction {
 ## Phase 5: Real-time Notifications & Admin (2-3 tuần)
 
 ### 5.1 Socket.IO Setup
+
 **Implementation:**
+
 - [ ] Setup Socket.IO on backend
 - [ ] Configure namespaces & rooms
 - [ ] Implement authentication for WebSocket
 - [ ] Create notification service
 
 **Namespaces:**
+
 ```typescript
 /notifications     # General notifications
 /transactions      # Transaction updates
@@ -481,7 +538,9 @@ QRTransaction {
 ```
 
 ### 5.2 Real-time Notifications
+
 **Events to implement:**
+
 ```typescript
 // Transaction events
 socket.emit('transaction:created', { transactionId, status })
@@ -498,6 +557,7 @@ socket.emit('notification:read', { notificationId })
 ```
 
 **Database for Notifications:**
+
 ```typescript
 Notification {
   _id: ObjectId
@@ -514,13 +574,16 @@ Notification {
 ```
 
 **Frontend:**
+
 - [ ] Real-time notification display (toast/bell)
 - [ ] Notification center (list view)
 - [ ] Mark as read functionality
 - [ ] Notification preferences (mute/unmute)
 
 ### 5.3 Admin Dashboard
+
 **Features:**
+
 - [ ] User management (search, filter, ban/unban)
 - [ ] Transaction monitoring (filter, approve/reject)
 - [ ] System statistics (daily/monthly stats)
@@ -529,6 +592,7 @@ Notification {
 - [ ] Revenue/fees earned
 
 **Backend Endpoints:**
+
 ```
 GET    /api/admin/users                # List all users (paginated)
 GET    /api/admin/users/:id            # Get user details
@@ -545,12 +609,14 @@ GET    /api/admin/stats/transactions   # Transaction stats
 ```
 
 **Frontend:**
+
 - [ ] User management page
 - [ ] Transaction approval queue
 - [ ] Analytics dashboard with charts
 - [ ] System logs viewer
 
 ### 5.4 Testing
+
 - [ ] Socket.IO connection tests
 - [ ] Admin endpoint tests
 - [ ] Real-time notification tests
@@ -560,7 +626,9 @@ GET    /api/admin/stats/transactions   # Transaction stats
 ## Phase 6: Security & Advanced Features (2-3 tuần)
 
 ### 6.1 Advanced Security
+
 **Implementation:**
+
 - [ ] Rate limiting (Redis)
 - [ ] Account lockout after failed logins
 - [ ] Device fingerprinting
@@ -569,12 +637,14 @@ GET    /api/admin/stats/transactions   # Transaction stats
 - [ ] Account recovery options
 
 **Features:**
+
 - [ ] Detect suspicious login from new device
 - [ ] Limit login attempts
 - [ ] Force password change on suspicious activity
 - [ ] Security audit log
 
 ### 6.2 Encryption & Data Protection
+
 - [ ] Encrypt PII fields (SSN, ID number)
 - [ ] Encrypt bank account numbers
 - [ ] Hash passwords (bcrypt)
@@ -584,7 +654,9 @@ GET    /api/admin/stats/transactions   # Transaction stats
 - [ ] CSRF protection
 
 ### 6.3 Rate Limiting
+
 **Strategy:**
+
 ```typescript
 // Limit auth endpoints
 POST /api/auth/login: 5 attempts per minute
@@ -598,7 +670,9 @@ Any endpoint: 100 per minute per user
 ```
 
 ### 6.4 Audit Logging
+
 **Database:**
+
 ```typescript
 AuditLog {
   _id: ObjectId
@@ -616,6 +690,7 @@ AuditLog {
 ```
 
 **Events to log:**
+
 - User login/logout
 - Profile changes
 - Bank account linking
@@ -628,19 +703,24 @@ AuditLog {
 ## Phase 7: Testing & Quality Assurance (2-3 tuần)
 
 ### 7.1 Unit Tests
+
 **Backend:**
+
 - [ ] Auth service tests
 - [ ] Wallet service tests
 - [ ] Transaction service tests
 - [ ] Bank account service tests
 
 **Frontend:**
+
 - [ ] Component tests
 - [ ] Hook tests
 - [ ] Store tests
 
 ### 7.2 Integration Tests
+
 **Backend:**
+
 - [ ] Auth flow (register → login → access)
 - [ ] Transfer flow
 - [ ] Deposit flow
@@ -648,22 +728,26 @@ AuditLog {
 - [ ] Admin operations
 
 **Frontend:**
+
 - [ ] Login flow
 - [ ] Transfer flow
 - [ ] User profile update
 
 ### 7.3 E2E Tests
+
 - [ ] Critical user flows (Cypress)
 - [ ] Admin workflows
 - [ ] Edge cases & error scenarios
 
 ### 7.4 Performance Testing
+
 - [ ] Load testing (Artillery)
 - [ ] Database query optimization
 - [ ] API response time targets
 - [ ] Frontend performance (Lighthouse)
 
 ### 7.5 Security Testing
+
 - [ ] Vulnerability scanning (npm audit, Snyk)
 - [ ] Penetration testing (optional)
 - [ ] OWASP Top 10 checks
@@ -673,24 +757,28 @@ AuditLog {
 ## Phase 8: Deployment & DevOps (2-3 tuần)
 
 ### 8.1 Docker Setup
+
 - [ ] Backend Dockerfile
 - [ ] Frontend Dockerfile
 - [ ] Docker Compose configuration
 - [ ] Volume configuration for data persistence
 
 ### 8.2 CI/CD Pipeline (GitHub Actions)
+
 - [ ] Unit test workflow
 - [ ] Build workflow
 - [ ] Integration test workflow
 - [ ] Deploy workflow (staging & production)
 
 ### 8.3 Monitoring & Logging
+
 - [ ] Application logs aggregation
 - [ ] Error tracking (Sentry)
 - [ ] Performance monitoring
 - [ ] Uptime monitoring
 
 ### 8.4 Documentation
+
 - [ ] API documentation (Swagger)
 - [ ] Setup guide
 - [ ] Deployment guide
@@ -701,17 +789,17 @@ AuditLog {
 
 ## Timeline Summary
 
-| Phase | Duration | Weeks |
-|-------|----------|-------|
-| 1. Foundation | 2-3 | Weeks 1-3 |
-| 2. Auth & Users | 3-4 | Weeks 4-7 |
-| 3. Wallet & Transactions | 3-4 | Weeks 8-11 |
-| 4. Bank Integration | 3-4 | Weeks 12-15 |
-| 5. Notifications & Admin | 2-3 | Weeks 16-18 |
-| 6. Security & Advanced | 2-3 | Weeks 19-21 |
-| 7. Testing & QA | 2-3 | Weeks 22-24 |
-| 8. Deployment | 2-3 | Weeks 25-27 |
-| **TOTAL** | | **~27 weeks (6-7 months)** |
+| Phase                    | Duration | Weeks                            |
+| ------------------------ | -------- | -------------------------------- |
+| 1. Foundation            | 2-3      | Weeks 1-3                        |
+| 2. Auth & Users          | 3-4      | Weeks 4-7                        |
+| 3. Wallet & Transactions | 3-4      | Weeks 8-11                       |
+| 4. Bank Integration      | 3-4      | Weeks 12-15                      |
+| 5. Notifications & Admin | 2-3      | Weeks 16-18                      |
+| 6. Security & Advanced   | 2-3      | Weeks 19-21                      |
+| 7. Testing & QA          | 2-3      | Weeks 22-24                      |
+| 8. Deployment            | 2-3      | Weeks 25-27                      |
+| **TOTAL**          |          | **~27 weeks (6-7 months)** |
 
 ---
 

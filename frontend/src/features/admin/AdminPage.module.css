@@ -1,0 +1,89 @@
+.page {
+  padding: 16px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.statCard {
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  padding: 16px 12px;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+}
+
+.statValue {
+  display: block;
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--color-primary);
+}
+
+.statLabel {
+  font-size: 11px;
+  color: var(--color-text-muted);
+  margin-top: 4px;
+  display: block;
+}
+
+.sectionTitle {
+  margin: 0 0 12px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card {
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: 16px;
+  box-shadow: var(--shadow-sm);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.badge {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 8px;
+  background: #fef3c7;
+  color: #b45309;
+  border-radius: var(--radius-full);
+}
+
+.ref {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  margin: 0 0 12px;
+  word-break: break-all;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.actions button {
+  flex: 1;
+}
+
+.empty {
+  text-align: center;
+  padding: 32px;
+  color: var(--color-text-muted);
+}
